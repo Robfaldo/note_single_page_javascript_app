@@ -9,9 +9,11 @@
   exports.testReport = testReport;
 })(this);
 
+console.log(this);
 var runTestReports = function(){
   testReport(addNoteTest(), this.addNoteTest.name);
   testReport(noteStoresTextTest(), this.noteStoresTextTest.name);
+  testReport(returnsOneNoteHTMLStringTest(), this.returnsOneNoteHTMLStringTest.name);
 }
 
 runTestReports();
