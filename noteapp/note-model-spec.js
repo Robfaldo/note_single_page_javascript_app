@@ -1,13 +1,10 @@
 (function(exports){
   var expect = function(actual, expected){
-  // evaluates to something that .toEqual method can be invoked on
-  // if(!(actual === expected)) {
-  //   throw new Error(actual + " does not equal " + expected)
-  // }
-  assert.isTrue(actual === expected);
-}
+    return assert.isTrue(actual === expected);
+  }
   exports.expect = expect
 })(this);
+
 
 
 (function(exports){
@@ -16,5 +13,17 @@
     return expect(note.showText(), "This text should be stored")
   }
   noteStoresTextTest();
+  exports.noteStoresTextTest = noteStoresTextTest;
+})(this);
 
+(function(exports){
+  var testReport = function(test, testName){
+    if(!test) {
+      console.log(testName + " failed");
+    } else {
+      console.log(testName + " passed");
+    }
+  }
+
+  testReport(noteStoresTextTest(), this.noteStoresTextTest.name);
 })(this);
