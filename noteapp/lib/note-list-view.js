@@ -6,5 +6,10 @@
 })(this);
 
 NoteListView.prototype.htmlString = function(){
-  return `<ul><li><div>${this.noteList.showNotes()}</div></li></ul>`
+  var htmlStringArray = [];
+  var arrayOfNotesText = this.noteList.showNotes();
+  arrayOfNotesText.forEach(function(noteText){
+    htmlStringArray.push(`<li><div>${noteText}</div></li>`)
+  });
+  return "<ul>" + htmlStringArray.join("") + "</ul>"
 }

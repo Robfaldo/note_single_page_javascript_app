@@ -28,7 +28,7 @@
 
     stringReturned = noteListView.htmlString()
 
-    return assert.isTrue(stringReturned === "<ul><li><div>Text of a note</div></li><div>Text of a second note</div></li></ul>")
+    return assert.isTrue(stringReturned === "<ul><li><div>Text of a note</div></li><li><div>Text of a second note</div></li></ul>")
   }
   returnsMultipleHtmlStringTest();
   exports.returnsMultipleHtmlStringTest = returnsMultipleHtmlStringTest;
