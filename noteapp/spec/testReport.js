@@ -6,6 +6,12 @@
       console.log(testName + " passed");
     }
   }
-
-  testReport(noteStoresTextTest(), this.noteStoresTextTest.name);
+  exports.testReport = testReport;
 })(this);
+
+var runTestReports = function(){
+  testReport(addNoteTest(), this.addNoteTest.name);
+  testReport(noteStoresTextTest(), this.noteStoresTextTest.name);
+}
+
+runTestReports();

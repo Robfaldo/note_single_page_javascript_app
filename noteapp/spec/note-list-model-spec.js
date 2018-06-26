@@ -9,11 +9,11 @@
 (function(exports){
   var addNoteTest = function(){
     var noteList = new NoteList();
-    var note = new Note("This is the first note text");
-    noteList.addNote(note)
+    noteList.addNote("text of note")
 
-    assert.isTrue(noteList.showNotes() === [note])
+    return assert.isIncluded("text of note", noteList.showNotes());
   }
 
   addNoteTest();
+  exports.addNoteTest = addNoteTest;
 })(this);
