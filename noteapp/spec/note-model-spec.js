@@ -5,8 +5,6 @@
   exports.expect = expect
 })(this);
 
-
-
 (function(exports){
   var noteStoresTextTest = function(){
     var note = new Note("This text should be stored");
@@ -16,14 +14,14 @@
   exports.noteStoresTextTest = noteStoresTextTest;
 })(this);
 
-(function(exports){
-  var testReport = function(test, testName){
-    if(!test) {
-      console.log(testName + " failed");
-    } else {
-      console.log(testName + " passed");
-    }
-  }
-
-  testReport(noteStoresTextTest(), this.noteStoresTextTest.name);
-})(this);
+// (function(exports){
+//   var testReport = function(test, testName){
+//     if(!test) {
+//       console.log(testName + " failed");
+//     } else {
+//       console.log(testName + " passed");
+//     }
+//   }
+//
+//   testReport(noteStoresTextTest(), this.noteStoresTextTest.name);
+// })(this);
