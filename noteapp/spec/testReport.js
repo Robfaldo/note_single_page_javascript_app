@@ -17,6 +17,7 @@ var runTestReports = function(){
   testReport(returnsOneNoteHTMLStringTest(), this.returnsOneNoteHTMLStringTest.name);
   testReport(returnsMultipleHtmlStringTest(), this.returnsMultipleHtmlStringTest.name);
   testReport(singleNoteViewReturnsHtmlTest(), this.singleNoteViewReturnsHtmlTest.name)
+  testReport(onlyReturns20CharsTest(), this.onlyReturns20CharsTest.name)
 }
 
 runTestReports();
