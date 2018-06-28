@@ -3,9 +3,8 @@
 (function(exports){
   var noteCounter = 0;
   function Note(text){
-    console.log("noteCounter =",noteCounter)
     this.id = noteCounter;
-    this._text = text
+    this._text = text;
     noteCounter++;
   };
 

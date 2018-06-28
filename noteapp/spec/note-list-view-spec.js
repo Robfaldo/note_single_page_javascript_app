@@ -1,15 +1,8 @@
-// Takes a note list model upon instantiation.
-  // Has a method that, when called, returns a string
-  //of HTML that represents the note list model. For
-  //example: <ul><li><div>Favourite food: pesto</div></li><li><div>Favourite drink: seltzer</div></li></ul>.
-
-// Handles a note list model that has no notes, one note or several notes
-
-
-(function(exports){
+ (function(exports){
   var returnsOneNoteHTMLStringTest = function(){
     var noteList = new NoteList();
-    noteList.addNote("Text of a note")
+    var note = new Note("Text of a note");
+    noteList.addNote(note)
     var noteListView = new NoteListView(noteList);
 
     stringReturned = noteListView.htmlString()
@@ -23,8 +16,10 @@
 (function(exports){
   var returnsMultipleHtmlStringTest = function(){
     var noteList = new NoteList();
-    noteList.addNote("Text of a note")
-    noteList.addNote("Text of a second note")
+    var note1 = new Note("Text of a note")
+    var note2 = new Note("Text of a second note")
+    noteList.addNote(note1)
+    noteList.addNote(note2)
     var noteListView = new NoteListView(noteList);
 
     stringReturned = noteListView.htmlString()
@@ -37,7 +32,8 @@
 (function(exports){
   var onlyReturns20CharsTest = function(){
     var noteList = new NoteList();
-    noteList.addNote("This is twenty chars with some extra")
+    var note  = new Note("This is twenty chars with some extra")
+    noteList.addNote(note)
     var noteListView = new NoteListView(noteList);
 
     stringReturned = noteListView.htmlString()
@@ -46,3 +42,29 @@
   exports.onlyReturns20CharsTest = onlyReturns20CharsTest;
   onlyReturns20CharsTest();
 })(this);
+
+
+ // Use TDD to update the note list view so that
+ // each note is linked to an appropriate URL for
+ // displaying that individual note e.g.
+ // http://localhost:8080#notes/1.
+
+ // Go to http://localhost:8080 in your browser.
+ // You should be able to click on a note and be
+ // redirected to the URL for that note. There should be
+ // no page refresh. The page content shouldn't change.
+ // (And you won't see the note, yet.)
+
+ // (function(exports){
+ //   function noteUpdatesToCorrectUrlTest(){
+ //     // Setup
+ //     var noteList = new NoteList();
+ //     noteList.addNote()
+ //     // Exercise
+ //     // Verify
+ //
+ //   };
+ //
+ //   exports.noteUpdatesToCorrectUrlTest = noteUpdatesToCorrectUrlTest;
+ //   noteUpdatesToCorrectUrlTest();
+ // })(this);
