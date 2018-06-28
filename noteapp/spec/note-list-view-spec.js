@@ -5,6 +5,7 @@
 
 // Handles a note list model that has no notes, one note or several notes
 
+
 (function(exports){
   var returnsOneNoteHTMLStringTest = function(){
     var noteList = new NoteList();
@@ -27,7 +28,6 @@
     var noteListView = new NoteListView(noteList);
 
     stringReturned = noteListView.htmlString()
-
     return assert.isTrue(stringReturned === "<ul><li><div>Text of a note</div></li><li><div>Text of a second note</div></li></ul>")
   }
   returnsMultipleHtmlStringTest();
