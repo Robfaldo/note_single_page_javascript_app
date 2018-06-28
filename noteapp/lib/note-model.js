@@ -1,7 +1,12 @@
 
+
 (function(exports){
+  var noteCounter = 0;
   function Note(text){
+    console.log("noteCounter =",noteCounter)
+    this.id = noteCounter;
     this._text = text
+    noteCounter++;
   };
 
   exports.Note = Note;
@@ -9,4 +14,8 @@
 
 Note.prototype.showText = function() {
   return this._text
+}
+
+Note.prototype.showId = function() {
+  return this.id;
 }
