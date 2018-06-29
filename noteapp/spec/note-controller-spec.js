@@ -1,11 +1,3 @@
-
-// A note controller can be instantiated.
-//
-// The innerHTML property of the app element
-// contains HTML somewhat similar to:
-// <ul><li><div>Favourite food: pesto</div></li></ul>.
-// (You'll need to mock some stuff to achieve this.)
-
 (function(exports){
   function aNoteControllerCanBeInstantiatedTest(){
     var noteList = new NoteList();

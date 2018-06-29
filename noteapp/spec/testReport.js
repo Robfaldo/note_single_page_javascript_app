@@ -10,14 +10,13 @@
 // })(this);
 //
 // var runTestReports = function(){
+//   console.log(this)
 //   testReport(addNoteTest(), this.addNoteTest.name);
 //   testReport(noteStoresTextTest(), this.noteStoresTextTest.name);
-//   // testReport(returnsOneNoteHTMLStringTest(), this.returnsOneNoteHTMLStringTest.name);
-//   // testReport(returnsMultipleHtmlStringTest(), this.returnsMultipleHtmlStringTest.name);
-//   // testReport(returnsOneNoteHTMLStringTest(), this.returnsOneNoteHTMLStringTest.name);
-//   // testReport(returnsMultipleHtmlStringTest(), this.returnsMultipleHtmlStringTest.name);
+//   testReport(returnsOneNoteHTMLStringTest(), this.returnsOneNoteHTMLStringTest.name);
+//   testReport(returnsMultipleHtmlStringTest(), this.returnsMultipleHtmlStringTest.name);
 //   testReport(singleNoteViewReturnsHtmlTest(), this.singleNoteViewReturnsHtmlTest.name)
-//   // testReport(onlyReturns20CharsTest(), this.onlyReturns20CharsTest.name)
+//   testReport(onlyReturns20CharsTest(), this.onlyReturns20CharsTest.name)
 // }
 //
 // runTestReports();

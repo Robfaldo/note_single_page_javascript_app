@@ -18,10 +18,3 @@
   noteStoresTextTest();
   exports.noteStoresTextTest = noteStoresTextTest;
 })(this);
-
-
-
-
- // TDD giving each note model object a unique id. The first note
- // created would have an id of 0. The second note created would
- // have an id of 1. etc.
