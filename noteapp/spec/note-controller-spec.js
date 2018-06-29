@@ -34,7 +34,7 @@
 
     function NoteListViewMock(noteListMock) {
       this.htmlString = function(noteListMock) {
-        return "<ul><li><div>Favourite food: pesto</div></li></ul>"
+        return "<ul><li><div><a href='#1'>Favourite food: pesto</a></div></li></ul>"
       }
     }
 
@@ -44,7 +44,7 @@
     noteController.insertIntoHtml();
 
     appInnerHtml = document.getElementById('app').innerHTML
-    assert.isTrue(appInnerHtml=== "<ul><li><div>Favourite food: pesto</div></li></ul>")
+    assert.isTrue(appInnerHtml=== `<ul><li><div><a href="#1">Favourite food: pesto</a></div></li></ul>`)
     assert.isTrue(noteListMock.addNoteCallCount == 1);
   }
   exports.noteControllerChangesHTMLTest = noteControllerChangesHTMLTest;
